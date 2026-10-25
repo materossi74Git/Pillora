@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pillora</string>
+    <string name="notification_channel_name">Promemoria Medicine</string>
+    <string name="notification_channel_desc">Avvisi sonori e notifiche all\'orario programmato delle medicine</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "Pillora",
+  "description": "Applicazione comoda per ricordare l'orario delle medicine con vista giornaliera e settimanale, gestione dosi, diario salute e notifiche personalizzate.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

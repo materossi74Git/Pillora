@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include Room SQLite database and preferences in full Google backup -->
+    <include domain="database" path="."/>
+    <include domain="sharedpref" path="."/>
+</full-backup-content>
