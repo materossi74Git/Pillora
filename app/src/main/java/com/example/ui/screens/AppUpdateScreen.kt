@@ -170,7 +170,7 @@ fun AppUpdateScreen(
                             OutlinedTextField(
                                 value = repoInput,
                                 onValueChange = { repoInput = it },
-                                placeholder = { Text("es. materossi74/promemoria-farmaci") },
+                                placeholder = { Text("es. materossi74/pillora") },
                                 singleLine = true,
                                 modifier = Modifier
                                     .weight(1f)

@@ -46,7 +46,7 @@ object GitHubAppUpdater {
 
     private const val PREFS_NAME = "github_updater_prefs"
     private const val KEY_REPO_NAME = "github_repo_name"
-    const val DEFAULT_REPO = "materossi74/promemoria-farmaci"
+    const val DEFAULT_REPO = "materossi74/pillora"
 
     fun getSavedRepo(context: Context): String {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -69,7 +69,7 @@ object GitHubAppUpdater {
                 connectTimeout = 12000
                 readTimeout = 12000
                 setRequestProperty("Accept", "application/vnd.github.v3+json")
-                setRequestProperty("User-Agent", "PromemoriaFarmaci-Android-App")
+                setRequestProperty("User-Agent", "Pillora-Android-App")
             }
 
             val responseCode = connection.responseCode
@@ -108,7 +108,7 @@ object GitHubAppUpdater {
             // Find APK asset in release
             val assetsArray = root.optJSONArray("assets")
             var apkUrl = ""
-            var apkName = "promemoria-farmaci-update.apk"
+            var apkName = "pillora.apk"
             var apkSize = 0L
 
             if (assetsArray != null && assetsArray.length() > 0) {
@@ -187,7 +187,7 @@ object GitHubAppUpdater {
                 instanceFollowRedirects = true
                 connectTimeout = 15000
                 readTimeout = 30000
-                setRequestProperty("User-Agent", "PromemoriaFarmaci-Android-App")
+                setRequestProperty("User-Agent", "Pillora-Android-App")
             }
 
             // Handle GitHub redirect if 302/301
@@ -198,7 +198,7 @@ object GitHubAppUpdater {
                 finalConnection = (URL(redirectUrl).openConnection() as HttpURLConnection).apply {
                     connectTimeout = 15000
                     readTimeout = 30000
-                    setRequestProperty("User-Agent", "PromemoriaFarmaci-Android-App")
+                    setRequestProperty("User-Agent", "Pillora-Android-App")
                 }
                 responseCode = finalConnection.responseCode
             }
